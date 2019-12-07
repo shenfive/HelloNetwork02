@@ -19,10 +19,10 @@ class ViewController: UIViewController {
         
         containerView.clipsToBounds = false
         containerView.backgroundColor = UIColor.clear
-        containerView.layer.shadowRadius = 20         //陰影
-        containerView.layer.shadowOpacity = 0.6;
+        containerView.layer.shadowRadius = 30         //陰影
+        containerView.layer.shadowOpacity = 0.9;
         containerView.layer.shadowColor = UIColor.gray.cgColor
-        containerView.layer.shadowOffset = CGSize(width: 10, height: 10)
+        containerView.layer.shadowOffset = CGSize(width: 30, height: 30)
         
         myImageView.clipsToBounds = true
         myImageView.layer.cornerRadius = myImageView.frame.width / 2         //圓角

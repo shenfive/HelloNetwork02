@@ -15,23 +15,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IWC-ou-AZl">
-                                <rect key="frame" x="37.5" y="183.5" width="300" height="300"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3dm-2U-qSV">
+                                <rect key="frame" x="27.5" y="173.5" width="320" height="320"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IWC-ou-AZl">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="Nxh-cJ-nTi"/>
-                                    <constraint firstAttribute="width" constant="300" id="mnp-Xj-gLE"/>
+                                    <constraint firstAttribute="trailing" secondItem="IWC-ou-AZl" secondAttribute="trailing" id="Mnm-wx-tNz"/>
+                                    <constraint firstItem="IWC-ou-AZl" firstAttribute="top" secondItem="3dm-2U-qSV" secondAttribute="top" id="OhI-jC-1oS"/>
+                                    <constraint firstItem="IWC-ou-AZl" firstAttribute="leading" secondItem="3dm-2U-qSV" secondAttribute="leading" id="V6r-fS-fWE"/>
+                                    <constraint firstAttribute="height" constant="320" id="bH8-OD-8W9"/>
+                                    <constraint firstAttribute="bottom" secondItem="IWC-ou-AZl" secondAttribute="bottom" id="dIC-q3-H3A"/>
+                                    <constraint firstAttribute="width" constant="320" id="te7-tt-5Ml"/>
                                 </constraints>
-                            </imageView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="IWC-ou-AZl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0V0-Pt-eGH"/>
-                            <constraint firstItem="IWC-ou-AZl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0a8-yA-uBA"/>
+                            <constraint firstItem="3dm-2U-qSV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8d7-2D-YMr"/>
+                            <constraint firstItem="3dm-2U-qSV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Cf8-Ca-1pk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="containerView" destination="3dm-2U-qSV" id="e03-nw-Nnn"/>
                         <outlet property="myImageView" destination="IWC-ou-AZl" id="IOo-wW-GhZ"/>
                     </connections>
                 </viewController>

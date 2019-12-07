@@ -10,9 +10,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var myImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let urlString = "https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2019/07/27/4/6617338.jpg"
+        if let url = URL(string: urlString){
+            do{
+                let data = try Data(contentsOf: url)
+                myImageView.image = UIImage(data: data)
+            }catch{
+                print(error.localizedDescription)
+            }
+            
+            
+            
+        }
+        
+        
     }
 
 

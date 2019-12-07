@@ -15,6 +15,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        myImageView.clipsToBounds = true
+        myImageView.layer.cornerRadius = 15
+        myImageView.layer.borderColor = UIColor.red.cgColor
+        myImageView.layer.borderWidth = 2
+        
         let urlString = "https://s.yimg.com/ny/api/res/1.2/UBe_uhOfJyDTjWqUBsKh.w--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyNDI7aD03NzQuMjEyNTk4NDI1MTk2OA--/https://s.yimg.com/uu/api/res/1.2/6hyNAqNpIHFLe.L..WL49Q--~B/aD05NTA7dz0xNTI0O3NtPTE7YXBwaWQ9eXRhY2h5b24-/http://media.zenfs.com/zh-Hant-TW/homerun/nownews.com/b0804bfa09809e880f1acf1fe3c285ba"
         DispatchQueue.global().async {
             if let url = URL(string: urlString){

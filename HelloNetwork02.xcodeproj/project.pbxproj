@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		639726129B635BF6134C7380 /* Pods_HelloNetwork02.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CF274149315E7EDC3E4D849 /* Pods_HelloNetwork02.framework */; };
 		BA4FCE91239B556D00D71606 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4FCE90239B556D00D71606 /* AppDelegate.swift */; };
 		BA4FCE93239B556D00D71606 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4FCE92239B556D00D71606 /* SceneDelegate.swift */; };
 		BA4FCE95239B556D00D71606 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4FCE94239B556D00D71606 /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1CF274149315E7EDC3E4D849 /* Pods_HelloNetwork02.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloNetwork02.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72DA0F03831F7E360F62EA0F /* Pods-HelloNetwork02.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloNetwork02.debug.xcconfig"; path = "Target Support Files/Pods-HelloNetwork02/Pods-HelloNetwork02.debug.xcconfig"; sourceTree = "<group>"; };
+		8525D2E75F8ED43D11754327 /* Pods-HelloNetwork02.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloNetwork02.release.xcconfig"; path = "Target Support Files/Pods-HelloNetwork02/Pods-HelloNetwork02.release.xcconfig"; sourceTree = "<group>"; };
 		BA4FCE8D239B556D00D71606 /* HelloNetwork02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloNetwork02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA4FCE90239B556D00D71606 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA4FCE92239B556D00D71606 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				639726129B635BF6134C7380 /* Pods_HelloNetwork02.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53836E29B26A6DDBBCD53787 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1CF274149315E7EDC3E4D849 /* Pods_HelloNetwork02.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BA4FCE84239B556D00D71606 = {
 			isa = PBXGroup;
 			children = (
 				BA4FCE8F239B556D00D71606 /* HelloNetwork02 */,
 				BA4FCE8E239B556D00D71606 /* Products */,
+				EDB9D918A80272FFE7066454 /* Pods */,
+				53836E29B26A6DDBBCD53787 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,16 @@
 			path = HelloNetwork02;
 			sourceTree = "<group>";
 		};
+		EDB9D918A80272FFE7066454 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				72DA0F03831F7E360F62EA0F /* Pods-HelloNetwork02.debug.xcconfig */,
+				8525D2E75F8ED43D11754327 /* Pods-HelloNetwork02.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA4FCEA1239B556E00D71606 /* Build configuration list for PBXNativeTarget "HelloNetwork02" */;
 			buildPhases = (
+				01B938D314DA7D3CECC71647 /* [CP] Check Pods Manifest.lock */,
 				BA4FCE89239B556D00D71606 /* Sources */,
 				BA4FCE8A239B556D00D71606 /* Frameworks */,
 				BA4FCE8B239B556D00D71606 /* Resources */,
+				D2568F07B8B3A566D3D0C449 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01B938D314DA7D3CECC71647 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HelloNetwork02-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2568F07B8B3A566D3D0C449 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HelloNetwork02/Pods-HelloNetwork02-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HelloNetwork02/Pods-HelloNetwork02-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HelloNetwork02/Pods-HelloNetwork02-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BA4FCE89239B556D00D71606 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		BA4FCEA2239B556E00D71606 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72DA0F03831F7E360F62EA0F /* Pods-HelloNetwork02.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +370,7 @@
 		};
 		BA4FCEA3239B556E00D71606 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8525D2E75F8ED43D11754327 /* Pods-HelloNetwork02.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
